@@ -6,7 +6,7 @@ import { PostRepository } from './PostRepository'
 describe('PostRepository', () => {
   const mockPostList: Post[] = getMockContentList()
 
-  it('should call getAll method and return all players', async () => {
+  it('should call getAll method and return all posts', async () => {
     const managerMock = await getManagerMock({
       findReturn: mockPostList
     })
