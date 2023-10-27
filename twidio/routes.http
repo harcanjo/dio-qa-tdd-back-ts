@@ -1,3 +1,12 @@
-GET http://localhost:5000/v1/posts
-
+GET http://localhost:5000/v1/posts 
 ###
+
+POST http://localhost:5000/v1/posts
+content-type: application/json
+
+{
+    "author": "dio@dio.me",
+    "content": "Muito conteúdo novo chegando na DIO em 2023"
+}
+###
+
