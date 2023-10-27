@@ -17,8 +17,8 @@ jest.mock('../services/SavePostService', () => {
 })
 
 describe('SavePostController', () => {
+  const newPostMock = getMockPost()
   it('Should return a status 200 when new post saved', async () => {
-    const newPostMock = getMockPost()
     mockExecute = jest.fn().mockResolvedValue(newPostMock)
 
     const savePostController = new SavePostController()
@@ -37,5 +37,25 @@ describe('SavePostController', () => {
     expect(mockExecute).toHaveBeenCalled()
     expect(response.state.json).toMatchObject(newPostMock)
     expect(response.state.status).toBe(201)
+  })
+
+  it('Should return a status 400 when body dont have content', async () => {
+    // mockExecute = jest.fn().mockResolvedValue(newPostMock)
+    const savePostController = new SavePostController()
+
+    const request = {
+      body: {
+        author: newPostMock.author,
+        content: ''
+      }
+    } as Request
+
+    const response = makeMockResponse()
+
+    await savePostController.handle(request, response)
+
+    expect(mockExecute).not.toHaveBeenCalled()
+    expect(response.state.json).toMatchObject({ error: 'Content must not be empty' })
+    expect(response.state.status).toBe(400)
   })
 })
