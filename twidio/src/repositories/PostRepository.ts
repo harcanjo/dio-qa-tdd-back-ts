@@ -5,6 +5,7 @@ import { Post } from '../entities/Post'
 export class PostRepository {
   private manager: EntityManager;
 
+  // eslint-disable-next-line space-before-function-paren
   constructor(manager: EntityManager) {
     this.manager = manager
   }
