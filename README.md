@@ -9,3 +9,25 @@ O TypeScript (TS) cresceu muito nos últimos anos e cada vez mais empresas têm 
 
 ## Links Úteis
 [Repositório no GitHub](https://github.com/nathyts/twidio/tree/savePost)
+
+
+## Notas
+
+- TDD
+  - Write a failing test
+  - Make the test pass
+  - Refactor
+
+- AAA
+  - Arrange - Montagem do cenário de testes
+  - Act - Ação que será testada
+  - Assert - Validação dos resultados esperados
+
+- Pirâmide de testes
+  - e2e
+  - integration
+  - unit
+  
+- VS Code extensions
+  - Jest - Orta
+  - Jest Runner - firsttris
