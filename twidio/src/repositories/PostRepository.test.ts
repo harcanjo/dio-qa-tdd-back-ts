@@ -29,7 +29,7 @@ describe('PostRepository', () => {
 
     const postRepository = new PostRepository(managerMock)
 
-    const result = await postRepository.save()
+    const result = await postRepository.save(mockPost)
 
     expect(managerMock.save).toHaveBeenCalled()
     expect(result).toMatchObject(mockPost)
