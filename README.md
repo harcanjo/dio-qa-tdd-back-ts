@@ -9,7 +9,13 @@ O TypeScript (TS) cresceu muito nos últimos anos e cada vez mais empresas têm 
 
 ## Links Úteis
 [Repositório no GitHub](https://github.com/nathyts/twidio/tree/savePost)
+[Jest API](https://jestjs.io/docs/api)
+[Jest Getting Started](https://jestjs.io/docs/getting-started)
 
+## TODO:
+- [ ] Revisar a parte do teste automatizado `tests/posts.tests.ts`
+- [ ] Implementar uma rota que retorne todos os posts de um usuário
+- [ ] Implementar uma rota que permita excluir um post
 
 ## Notas
 

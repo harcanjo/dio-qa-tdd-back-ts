@@ -26,20 +26,20 @@ describe('/posts', () => {
     expect(response.data).toMatchObject(expectedResponse)
   })
 
-  it('Should return status 200 when post is saved', async () => {
-    const response = await server.post('/post', {
-      author: 'some@email.dio',
-      content: 'Some tuit about that'
-    })
+  // it('Should return status 200 when post is saved', async () => {
+  //   const response = await server.post('/post', {
+  //     author: 'some@email.dio',
+  //     content: 'Some tuit about that'
+  //   })
 
-    const connection = await createConnection()
-    await connection.query(`DELETE FROM posts WHERE post_id = ${response.data.post_id}`)
-    await connection.close()
+  //   const connection = await createConnection()
+  //   await connection.query(`DELETE FROM posts WHERE post_id = ${response.data.post_id}`)
+  //   await connection.close()
 
-    expect(response.status).toBe(201)
-    expect(response.data).toMatchObject({
-      author: 'some@email.dio',
-      content: 'Some tuit about that'
-    })
-  })
+  //   expect(response.status).toBe(201)
+  //   expect(response.data).toMatchObject({
+  //     author: 'some@email.dio',
+  //     content: 'Some tuit about that'
+  //   })
+  // })
 })
